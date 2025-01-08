@@ -5,6 +5,7 @@
     -webkit-transition-timing-function: linear !important;
     transition-timing-function: linear !important;
     position: relative;
+    transform : translate3d(0px) !important;
     }
     .swiper-pagination-bullet {
     background: #4f46e5;

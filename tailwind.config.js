@@ -14,12 +14,14 @@ module.exports = {
       backgroundColor: {
         black: 'rgba(0, 0, 0, 0.5)', // Custom dark overlay
       },
+      
     },
     screens: {
       sm: '640px',
       md: '768px', // Ensure this matches your expectations
       lg: '1024px',
     },
+    
   },
   plugins: [
     require('flowbite/plugin') // Add Flowbite as a Tailwind plugin

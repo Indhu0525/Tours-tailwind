@@ -71,7 +71,7 @@
          
           <ul class="flex flex-col p-3 md:p-0 mt-4 space-x-3 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:flex-row md:mt-0 md:border-0 md:bg-white ">
             <li class="m-0">
-              <a href="#" class="block p-2 text-slate-800 rounded font-normal " aria-current="page">Destination</a>
+              <a href="#" class="block p-2 text-slate-800 rounded font-normal hover:border-b-2" aria-current="page">Destination</a>
             </li>
             <li class="m-0">
               <a href="#" class="block p-2 text-slate-800 rounded font-normal " aria-current="page">Travel styles</a>
@@ -85,10 +85,13 @@
           </ul>
         </div>
       </div>
-<div id="default-carousel" class="relative " data-carousel="slide">
-        <div class="relative h-[600px] overflow-hidden rounded-lg">
-            <div class="hidden absolute inset-0 transition-transform" data-carousel-item>
-                <img src="./assets/images/bgcover2.avif" class="absolute block w-full h-full object-cover" alt="...">
+<!-- slider -->
+<div class="mt-2">
+    <div class="swiper swipercarousel ">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide flex flex-col items-center justify-center  mr-0 relative h-[700px] overflow-hidden rounded-lg">
+                <img src="./assets/images/bgcover2.avif" class="absolute block w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110" alt="...">
                 <div class="bg-black bg-opacity-50 absolute inset-0 flex flex-col justify-center items-center  text-center px-4 ">
                     <h1 class="text-4xl font-bold mb-3 text-white transition-transform duration-700 ease-in-out">
                         Life is now. Travel.
@@ -102,350 +105,451 @@
                       </p>
                       <div class="block md:flex items-center justify-center mt-4 gap-5 ">
                         <div class="relative w-[16rem] md:w-[24rem] bg-transparent backdrop-blur-sm border border-gray-600 rounded-sm transition-all duration-700">
-                            <button class="flex items-center justify-between px-4 py-2 text-gray-200 w-full transition-colors duration-500 bg-transparent"onclick="document.getElementById('dropdown-menu').classList.toggle('hidden')"type="button">
+                            <button id="dropdown-button" class="flex items-center justify-between px-4 py-2 text-gray-200  w-96 transition-colors duration-500 bg-transparent" type="button">
                                 <span class="text-xs md:text-sm">Find destination ...</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="20px"
-                                    viewBox="0 -960 960 960"
-                                    width="20px"
-                                    fill="#F3F3F3">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#F3F3F3">
                                     <path d="M480-346.85 253.85-573 291-610.15l189 189 189-189L706.15-573 480-346.85Z" />
                                 </svg>
                             </button>
-                            <div id="dropdown-menu" class="mt-2 hidden absolute z-10 w-full bg-white divide-y divide-gray-100 shadow rounded-md">
+                            <div id="dropdown-menu" class="mt-2 hidden absolute z-10 bg-white divide-y divide-gray-100 shadow rounded-md w-full">
                                 <ul class="py-2 text-sm text-gray-700">
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Settings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Earnings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Sign out
-                                        </a>
-                                    </li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold transform transition-transform hover:scale-90 rounded-md">Dashboard</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold transform transition-transform hover:scale-90">
+                                    <span class="">
+                                        Settings
+                                    </span></a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold transform transition-transform hover:scale-90">Earnings</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold transform transition-transform hover:scale-90">Sign out</a></li>
                                 </ul>
                             </div>
+                        
                         </div>
                         <button type="button" class="text-gray-900 bg-[#F7BE38] mt-4 md:m-0 hover:bg-[#F7BE38]/90 font-semibold rounded-md text-sm px-8 py-2.5 text-center inline-flex items-center transition-transform duration-500 hover:scale-105">
                             Search
                         </button>
-                    </div>
+                      </div>
                 </div>
             </div>
-            <div class="hidden  transition-transform absolute inset-0 " data-carousel-item>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0 relative h-[700px] overflow-hidden rounded-lg">
                 <img src="./assets/images/bgcovernew" class="absolute block w-full h-full object-cover" alt="...">
                 <div class="bg-black bg-opacity-50 absolute inset-0 flex flex-col justify-center items-center  text-center px-4">
                     <h1 class="text-4xl font-bold mb-3 text-white transition-transform duration-700 ease-in-out">
-                        Life is now. Travel.
+                        TRAVEL SLIDE 2
                       </h1>
-                      <p class="my-6 md:text-lg text-sm font-semibold text-white transition-opacity duration-700">
-                        CURATED GROUP STYLES & ITINERARIES FOR ALL TRAVELERS
-                      </p>
-                      <p class="text-sm font-normal text-gray-100 leading-relaxed hidden md:flex transition-opacity duration-700">
-                        Connect with other solo travellers or experience the joy of travel with your friends and family.<br />
-                        With our group styles explore the world and unfold your adventure!
-                      </p>
-                      <div class="block md:flex items-center justify-center mt-4 gap-5 ">
-                        <div class="relative w-[16rem] md:w-[24rem] bg-transparent backdrop-blur-sm border border-gray-600 rounded-sm transition-all duration-700">
-                            <button class="flex items-center justify-between px-4 py-2 text-gray-200 w-full transition-colors duration-500 bg-transparent"onclick="document.getElementById('dropdown-menu').classList.toggle('hidden')"type="button">
-                                <span class="text-xs md:text-sm">Find destination ...</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="20px"
-                                    viewBox="0 -960 960 960"
-                                    width="20px"
-                                    fill="#F3F3F3">
-                                    <path d="M480-346.85 253.85-573 291-610.15l189 189 189-189L706.15-573 480-346.85Z" />
-                                </svg>
-                            </button>
-                            <div id="dropdown-menu" class="mt-2 hidden absolute z-10 w-full bg-white divide-y divide-gray-100 shadow rounded-md">
-                                <ul class="py-2 text-sm text-gray-700">
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Settings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Earnings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Sign out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button type="button" class="text-gray-900 bg-[#F7BE38] mt-4 md:m-0 hover:bg-[#F7BE38]/90 font-semibold rounded-md text-sm px-8 py-2.5 text-center inline-flex items-center transition-transform duration-500 hover:scale-105">
-                            Search
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
-            <div class="hidden transition-transform absolute inset-0 " data-carousel-item>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0 relative h-[700px] overflow-hidden rounded-lg">
                 <img src="./assets/images/bg3.jpg" class="absolute block w-full h-full object-cover" alt="...">
-                <div class="bg-black bg-opacity-50 absolute inset-0 flex flex-col justify-center items-center  text-center px-4">
+                <div class="bg-black bg-opacity-50 absolute inset-0 flex flex-col justify-center items-center  text-center px-4 ">
                     <h1 class="text-4xl font-bold mb-3 text-white transition-transform duration-700 ease-in-out">
-                        Life is now. Travel.
+                        TRAVEL SLIDE 3
                       </h1>
-                      <p class="my-6 md:text-lg text-sm font-semibold text-white transition-opacity duration-700">
-                        CURATED GROUP STYLES & ITINERARIES FOR ALL TRAVELERS
-                      </p>
-                      <p class="text-sm font-normal text-gray-100 leading-relaxed hidden md:flex transition-opacity duration-700">
-                        Connect with other solo travellers or experience the joy of travel with your friends and family.<br />
-                        With our group styles explore the world and unfold your adventure!
-                      </p>
-                      <div class="block md:flex items-center justify-center mt-4 gap-5 ">
-                        <div class="relative w-[16rem] md:w-[24rem] bg-transparent backdrop-blur-sm border border-gray-600 rounded-sm transition-all duration-700">
-                            <button class="flex items-center justify-between px-4 py-2 text-gray-200 w-full transition-colors duration-500 bg-transparent"onclick="document.getElementById('dropdown-menu').classList.toggle('hidden')"type="button">
-                                <span class="text-xs md:text-sm">Find destination ...</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="20px"
-                                    viewBox="0 -960 960 960"
-                                    width="20px"
-                                    fill="#F3F3F3">
-                                    <path d="M480-346.85 253.85-573 291-610.15l189 189 189-189L706.15-573 480-346.85Z" />
-                                </svg>
-                            </button>
-                            <div id="dropdown-menu" class="mt-2 hidden absolute z-10 w-full bg-white divide-y divide-gray-100 shadow rounded-md">
-                                <ul class="py-2 text-sm text-gray-700">
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Dashboard
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Settings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Earnings
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start font-semibold">
-                                            Sign out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <button type="button" class="text-gray-900 bg-[#F7BE38] mt-4 md:m-0 hover:bg-[#F7BE38]/90 font-semibold rounded-md text-sm px-8 py-2.5 text-center inline-flex items-center transition-transform duration-500 hover:scale-105">
-                            Search
-                        </button>
-                    </div>
+                    
                 </div>
-            </div>
-           
-            <!-- <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-transform" data-carousel-item>
-           
-                <img src="./assets/images/bgcovernew" class="absolute block w-full h-full object-cover" alt="...">
-             
-                <div class="absolute inset-0 bg-black/40">
-                    <div class="flex h-full items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h2 class="text-4xl font-bold mb-3">Second Slide Title</h2>
-                            <p class="text-xl">Description for the second slide</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-         
-            <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-transform" data-carousel-item>
-            
-                <img src="./assets/images/bg3.jpg" class="absolute block w-full h-full object-cover" alt="...">
-            
-                <div class="absolute inset-0 bg-black/40">
-                    <div class="flex h-full items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h2 class="text-4xl font-bold mb-3">Third Slide Title</h2>
-                            <p class="text-xl">Description for the third slide</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                <button type="button" class="w-3 h-3 rounded-full bg-white/30 hover:bg-white" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-white/30 hover:bg-white" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-white/30 hover:bg-white" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             </div>
         </div>
-</div>
+        <!-- Navigation buttons -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- Pagination (dots) -->
+    </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-pagination absolute !bottom-[10%] !left-[50%] transform -translate-x-1/2 z-10 "></div>
 
+</div>
+<!-- recent tours -->
 <div class="mx-auto max-w-screen-xl">
     <div class="flex my-[2rem]  md:mt-24 md:mb-16  justify-between ">
         <h2 class="text-[1.25rem] md:text-[1.5rem]  font-bold">Recently viewed tours</h2>
         <div class="flex gap-2">
-            <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" /></svg>
-            </button>
-            <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z" /></svg>
-            </button>
+            <button type="button" id="prev-button2" class="border border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+              </button>
+              <button type="button" id="next-button2" class="border border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+              </button>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/recentlyviewed1.jpg" class="object-cover h-72 w-full rounded-lg " alt="...">
-                </a>
-                <div class="absolute bottom-2 right-2 flex space-x-2">
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                    </button>
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                    </button>
+ 
+    <div class="swiper mySwiper2 ">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper gap-2">
+            <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed1.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                          
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
                 </div>
             </div>
-            <div class="px-5 py-3">
-                <a href="#">
-                    <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-            </div>
-        </div>
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/recentlyviewed3.jpg" class="object-cover h-72 w-full rounded-lg " alt="...">
-                </a>
-                <div class="absolute bottom-2 right-2 flex space-x-2">
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                    </button>
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                    </button>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed3.jpg" 
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
                 </div>
             </div>
-            <div class="px-5 py-3">
-                <a href="#">
-                    <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-            </div>
-        </div>
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/recentlyviewed2.jpg" class="object-cover h-72 w-full rounded-lg " alt="...">
-                </a>
-                <div class="absolute bottom-2 right-2 flex space-x-2">
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                    </button>
-                    <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                    </button>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed2.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
                 </div>
             </div>
-            <div class="px-5 py-3">
-                <a href="#">
-                    <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+            <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed1.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                          
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed3.jpg" 
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed2.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/recentlyviewed2.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                            </button>
+                            <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3">
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                        <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Navigation buttons -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- Pagination (dots) -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
+
+
 </div>
 <!-- popular trip themes   -->
 <div class="mx-auto max-w-screen-xl">
     <div class="flex my-[2rem]  md:mt-24 md:mb-16  justify-between ">
         <h2 class="text-[1.25rem] md:text-[1.5rem]  font-bold">Popular trip themes</h2>
         <div class="flex gap-2">
-            <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+            <button type="button"  id="prev-button3" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" /></svg>
             </button>
-            <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+            <button type="button" id="next-button3" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z" /></svg>
             </button>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 ">
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/solotravel.jpg" class="object-cover h-72  " alt="...">
-                </a>
-                <div class="flex justify-center">
-                    <div class="absolute bottom-5  flex space-x-2 mx-2">
-                        <button class="bg-white p-2 rounded-sm border-gray-700 shadow font-semibold w-44">
-                            Solo travellers
-                        </button>
+    <div class="swiper mySwiper3 ">
+        <!-- Swiper Wrapper -->
+        <div class="swiper-wrapper gap-2">
+            <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 shadow font-semibold w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel2.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5   flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel3.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border-2 border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel4.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 shadow font-semibold w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel2.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5   flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel3.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                <div class=" w-full bg-white border-2 border-gray-200 rounded-lg shadow-lg ">
+                    <div class="relative">
+                        <a href="#" class="block overflow-hidden rounded-lg">
+                            <img
+                              src="./assets/images/solotravel4.jpg"
+                              class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                              alt="...">
+                          </a>
+                        <div class="flex justify-center">
+                            <div class="absolute bottom-5  flex space-x-2 mx-2">
+                                <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
+                                    Solo travellers
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/solotravel2.jpg" class="object-cover h-72  " alt="...">
-                </a>
-                <div class="flex justify-center">
-                    <div class="absolute bottom-5   flex space-x-2 mx-2">
-                        <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
-                            Solo travellers
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg ">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/solotravel3.jpg" class="object-cover h-72  " alt="...">
-                </a>
-                <div class="flex justify-center">
-                    <div class="absolute bottom-5  flex space-x-2 mx-2">
-                        <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
-                            Solo travellers
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=" w-full bg-white border-2 border-gray-200 rounded-lg shadow-lg ">
-            <div class="relative">
-                <a href="# ">
-                    <img src="./assets/images/solotravel4.jpg" class="object-cover h-72  " alt="...">
-                </a>
-                <div class="flex justify-center">
-                    <div class="absolute bottom-5  flex space-x-2 mx-2">
-                        <button class="bg-white p-2 rounded-sm border-gray-700 font-semibold shadow w-44">
-                            Solo travellers
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Navigation buttons -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- Pagination (dots) -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
 </div>
 <!-- {/* newsletter */} -->
@@ -475,66 +579,142 @@
                 <div class="flex my-[2rem]  md:mt-24 md:mb-16  justify-between items-center ">
                     <h2 class="text-[1.25rem] md:text-[1.5rem]  font-bold">Our most  popular tours</h2>
                     <div class="flex gap-2">
-                        <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                        <button type="button"  id="prev-button4" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" /></svg>
                         </button>
-                        <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                        <button type="button" id="next-button4" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z" /></svg>
                         </button>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4  mb-3">
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/populartours1.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                <div class="swiper mySwiper4 ">
+                    <!-- Swiper Wrapper -->
+                    <div class="swiper-wrapper gap-2">
+                        <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/populartours1.jpg" 
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-                        </div>
-                    </div>
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/populartours2.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/populartours2.jpg" 
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                        <div class="swiper-slide flex flex-col items-center justify-center  mr-0 ">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/populartours1.jpg" 
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/populartours2.jpg" 
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
+                        </div>
+                       
                     </div>
+                    <!-- Navigation buttons -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                    <!-- Pagination (dots) -->
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
                         <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/populartours3.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
+                            <a href="#" class="block overflow-hidden rounded-lg">
+                                <img
+                                  src="./assets/images/populartours3.jpg" 
+                                  class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                  alt="...">
+                              </a>
                             <div class="absolute bottom-2 right-2 flex space-x-2">
                                 <button class="bg-white p-2 rounded-full shadow border-gray-700">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
@@ -553,21 +733,24 @@
                             <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
                         </div>
                     </div>
+                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                        <div class="relative">
+                            <a href="#" class="block overflow-hidden rounded-lg">
+                                <img
+                                  src="./assets/images/populartours4.jpg" 
+                                  class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                  alt="...">
+                              </a>
+                            <div class="absolute bottom-2 right-2 flex space-x-2">
+                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                </button>
+                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                </button>
+                            </div>
+                        </div>
 
-                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div className="relative">
-                            <a href="# ">
-                                <img src="./assets/images/populartours4.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div className="absolute bottom-2 right-2 flex space-x-2">
-                                <button className="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button className="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
-                            </div>
-                        </div>
                         <div class="px-5 py-3">
                             <a href="#">
                                 <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
@@ -576,20 +759,24 @@
                             <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
                         </div>
                     </div>
-                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div className="relative">
-                            <a href="# ">
-                                <img src="./assets/images/populartours5.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div className="absolute bottom-2 right-2 flex space-x-2">
-                                <button className="bg-white p-2 rounded-full shadow border-gray-700">
+                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                        <div class="relative">
+                            <a href="#" class="block overflow-hidden rounded-lg">
+                                <img
+                                  src="./assets/images/populartours5.jpg" 
+                                  class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                  alt="...">
+                              </a>
+                            <div class="absolute bottom-2 right-2 flex space-x-2">
+                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
                                 </button>
-                                <button className="bg-white p-2 rounded-full shadow border-gray-700">
+                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
                                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
                                 </button>
                             </div>
                         </div>
+
                         <div class="px-5 py-3">
                             <a href="#">
                                 <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
@@ -598,6 +785,8 @@
                             <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
                         </div>
                     </div>
+                 
+                   
                 </div>
                 <div class="flex justify-end items-end my-8">
                     <button type="button" class="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90  font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center">
@@ -610,108 +799,248 @@
                 <div class="flex my-[2rem]  md:mt-24 md:mb-16  justify-between ">
                     <h2 class="text-[1.25rem] md:text-[1.5rem]  font-bold">Popular one day tours</h2>
                     <div class="flex gap-2">
-                        <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                        <button type="button"  id="prev-button3" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" /></svg>
                         </button>
-                        <button type="button" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
+                        <button type="button" id="next-button3" class="border   border-slate-300 hover:border-slate-700 font-medium rounded-sm text-sm p-2 text-center inline-flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#666666"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z" /></svg>
                         </button>
 
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/onedaytours1.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                <div class="swiper mySwiper3 ">
+                    <!-- Swiper Wrapper -->
+                    <div class="swiper-wrapper gap-2">
+                        <div class="swiper-slide flex flex-col items-center justify-center  mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours1.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-                        </div>
-                    </div>
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/onedaytours.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-                        </div>
-                    </div>
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/onedaytours2.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours2.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
-                        </div>
-                    </div>
-                    <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
-                        <div class="relative">
-                            <a href="# ">
-                                <img src="./assets/images/onedaytours3.jpg" class="object-cover h-72 w-full rounded-lg  " alt="...">
-                            </a>
-                            <div class="absolute bottom-2 right-2 flex space-x-2">
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
-                                </button>
-                                <button class="bg-white p-2 rounded-full shadow border-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
-                                </button>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours3.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="px-5 py-3">
-                            <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
-                            <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                        <div class="swiper-slide flex flex-col items-center justify-center  mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours1.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours2.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col items-center justify-center mr-0">
+                            <div class=" w-full bg-white border border-gray-200 rounded-lg shadow-lg p-2">
+                                <div class="relative">
+                                    <a href="#" class="block overflow-hidden rounded-lg">
+                                        <img
+                                          src="./assets/images/onedaytours3.jpg"
+                                          class="object-cover h-72 w-full rounded-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                                          alt="...">
+                                      </a>
+                                    <div class="absolute bottom-2 right-2 flex space-x-2">
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="M444-336v-342L339-573l-51-51 192-192 192 192-51 51-105-105v342h-72ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z" /></svg>
+                                        </button>
+                                        <button class="bg-white p-2 rounded-full shadow border-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#434343"><path d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" /></svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <div class="px-5 py-3">
+                                    <a href="#">
+                                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 ">THAILAND: Adventure to Chiang Mai, Phuket and Beaches</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 ">5 days | 8 days with Thailand extension</p>
+                                    <p class="mb-3 font-normal text-gray-700 ">From <span class="ml-2 font-bold text-gray-900">$1,000</span><span class="ml-2 line-through">$1000</span><span class="ml-2 text-lg text-yellow-300">Sale</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- Navigation buttons -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                    <!-- Pagination (dots) -->
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
        </div>
 
@@ -1154,7 +1483,7 @@
             </div>
         </div>
     </div>
-<div class="swiper mySwiper">
+<div class="swiper mySwiper mx-5">
     <!-- Swiper Wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
@@ -1197,7 +1526,7 @@
     <!-- Pagination (dots) -->
     <!-- <div class="swiper-pagination"></div> -->
 </div>
-<div class="swiper mySwiper">
+<div class="swiper mySwiper mx-5">
     <!-- Swiper Wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
@@ -1242,7 +1571,12 @@
     <!-- Pagination (dots) -->
     <!-- <div class="swiper-pagination"></div> -->
 </div>
+</div>
 <script src="./slider.js"></script>
+<script src="./dropdown.js"></script>
+<!-- <script src="./recentslider.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>
